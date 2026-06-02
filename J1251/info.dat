@@ -1,0 +1,5 @@
+z_source = 0.802
+z_lens = 0.410
+Source = J1251
+Pos + Flux Source = Keely et al (2025)
+Config = Quad

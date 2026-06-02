@@ -1,0 +1,5 @@
+z_source = 1.302
+z_lens = 0.55
+Source = J0607
+Pos + Flux Source = Keely et al (2025)
+Config = Quad

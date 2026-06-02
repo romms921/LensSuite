@@ -1,0 +1,5 @@
+z_source = 3.15
+z_lens = -
+Source = J0457
+Pos + Flux Source = Keely et al (2025)
+Config = Trip

@@ -1,0 +1,5 @@
+z_source = 2.64
+z_lens = 0.96
+Source = MG0414
+Pos + Flux Source = Keely et al (2025)
+Config = Quad

@@ -1,0 +1,5 @@
+z_source = 2.72
+z_lens = 0.49
+Source = CASTLES
+Pos + Flux Source = CASTLES
+Config = Double

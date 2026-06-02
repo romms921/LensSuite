@@ -1,0 +1,6 @@
+z_source = 1.86
+z_lens = 
+Source = Lemon et al (2020)
+Pos + Flux Source = Lemon et al (2020)
+Config = Double
+Other = Flux Ratio error set to arbitrary 0.02
