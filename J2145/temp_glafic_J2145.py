@@ -1,0 +1,21 @@
+import glafic
+glafic.init(0.3, 0.7, -1.0, 0.7, '/Users/ainsleylewis/Documents/Astronomy/LensSuite/J2145/SIE', -1.0, -1.0, 2.843, 2.6719999999999997, 0.001, 0.001, 1, verb=0)
+glafic.set_secondary('chi2_splane 0', verb=0)
+glafic.set_secondary('chi2_checknimg 0', verb=0)
+glafic.set_secondary('chi2_restart -1', verb=0)
+glafic.set_secondary('chi2_usemag 1', verb=0)
+glafic.set_secondary('hvary 0', verb=0)
+glafic.set_secondary('ran_seed -122000', verb=0)
+glafic.startup_setnum(1, 0, 1)
+glafic.set_lens(1, 'sie', 1.3041090578503327, 148.20964328357047, -0.2839089272618738, -0.5310016199691567, 0.5542254249273304, 33.35151399747461, 0.0, 0.0)
+glafic.set_point(1, 1.56, -0.1949474291410458, -0.8658261752813691)
+glafic.setopt_lens(1, 0, 0, 0, 0, 0, 0, 0, 0)
+glafic.setopt_point(1, 0, 0, 0)
+glafic.model_init()
+glafic.readobs_point('/Users/ainsleylewis/Documents/Astronomy/LensSuite/J2145/pos_point.dat')
+try:
+    chi2 = glafic.c2calc()
+except Exception:
+    chi2 = float('inf')
+print(f'chi^2 = {chi2:e}')
+glafic.quit()
