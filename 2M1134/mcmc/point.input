@@ -1,0 +1,42 @@
+
+
+## setting primary parameters
+omega     0.300000
+lambda    0.700000
+weos      -1.000000
+hubble    0.700000
+prefix    /Users/ainsleylewis/Documents/Astronomy/LensSuite/2M1134/mcmc/sie
+xmin	  -1.0
+ymin	  -1.0
+xmax	  3.678
+ymax	  3.531
+pix_ext   0.001
+pix_poi   0.001
+maxlev	  1
+
+## some examples of secondary parameters
+chi2_splane    1
+chi2_checknimg 1
+chi2_restart   -1
+chi2_usemag    0
+hvary          0
+
+## define lenses and sources
+startup 1 0 1
+lens sie  0.66 332.0153 1.11609 1.650969 0.8954263 223.3513 0.0 0.0
+point 2.77 1.242003 1.375761
+end_startup
+
+## for optimizations
+## can be ignored unless you do opts
+start_setopt
+0 1 1 1 1 1 0 0 
+0 0 0
+end_setopt
+
+## execute commands
+start_command
+readobs_point /Users/ainsleylewis/Documents/Astronomy/LensSuite/2M1134/pos_point.dat
+mcmc_sigma /Users/ainsleylewis/Documents/Astronomy/LensSuite/2M1134/mcmc/sigfile.dat
+mcmc 1000000
+quit

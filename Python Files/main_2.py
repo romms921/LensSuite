@@ -254,7 +254,7 @@ glafic.init(0.3, 0.7, -1.0, 0.7, f'./{system_name}/{model_ver}', x_min, y_min, x
 glafic.set_secondary('chi2_splane 0', verb = 0)
 glafic.set_secondary('chi2_checknimg 0', verb = 0)
 glafic.set_secondary('chi2_restart   -1', verb = 0)
-glafic.set_secondary('chi2_usemag    1', verb = 0)
+glafic.set_secondary('chi2_usemag    0', verb = 0)
 glafic.set_secondary('hvary          0', verb = 0)
 glafic.set_secondary('ran_seed -122000', verb = 0)
 
