@@ -4,7 +4,7 @@ import os
 import re
 import numpy as np 
 
-system_name = 'MG0414'
+system_name = 'B2045'
 model_ver = 'sie'
 
 # Import system info
@@ -249,9 +249,9 @@ lens_center_x = round(lens_center_x, 3)
 lens_center_y = round(lens_center_y, 3)
 
 
-glafic.init(0.3, 0.7, -1.0, 0.7, f'./{system_name}/{model_ver}', x_min, y_min, x_max, y_max, 0.01, 0.01, 1, verb = 0)
+glafic.init(0.3, 0.7, -1.0, 0.7, f'./{system_name}/{model_ver}', x_min, y_min, x_max, y_max, 0.001, 0.001, 1, verb = 0)
 
-glafic.set_secondary('chi2_splane 0', verb = 0)
+glafic.set_secondary('chi2_splane 1', verb = 0)
 glafic.set_secondary('chi2_checknimg 0', verb = 0)
 glafic.set_secondary('chi2_restart   -1', verb = 0)
 glafic.set_secondary('chi2_usemag    0', verb = 0)
@@ -259,7 +259,7 @@ glafic.set_secondary('hvary          0', verb = 0)
 glafic.set_secondary('ran_seed -122000', verb = 0)
 
 glafic.startup_setnum(1, 0, 1)
-glafic.set_lens(1, 'sie', z_lens, 295, lens_center_x, lens_center_y, 0.2, -100, 0.0, 0.0)
+glafic.set_lens(1, 'sie', z_lens, 331, lens_center_x, lens_center_y, 0.89, 0, 0.0, 0.0)
 glafic.set_point(1, z_source, lens_center_x, lens_center_y)
 
 glafic.setopt_lens(1, 0, 1, 1, 1, 1, 1, 0, 0)

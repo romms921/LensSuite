@@ -10,28 +10,28 @@ xmin	  -1.0
 ymin	  -1.0
 xmax	  3.678
 ymax	  3.531
-pix_ext   0.001
-pix_poi   0.001
+pix_ext   0.0001
+pix_poi   0.0001
 maxlev	  1
 
 ## some examples of secondary parameters
 chi2_splane    1
-chi2_checknimg 1
 chi2_restart   -1
 chi2_usemag    0
 hvary          0
+flag_mcmcall   1
 
 ## define lenses and sources
 startup 1 0 1
-lens sie  0.66 332.0153 1.11609 1.650969 0.8954263 223.3513 0.0 0.0
-point 2.77 1.242003 1.375761
+lens sie  0.66 331.9952 1.116136 1.650918 0.8953476 43.34886 0.0 0.0
+point 2.77 1.241999 1.375776
 end_startup
 
 ## for optimizations
 ## can be ignored unless you do opts
 start_setopt
-0 1 1 1 1 1 0 0 
-0 0 0
+0 1 1 1 1 1 0 0
+0 1 1
 end_setopt
 
 ## execute commands
