@@ -312,7 +312,7 @@ end_setopt
 start_command
 readobs_point {current_path}/{system_name}/pos_point.dat
 mcmc_sigma {full_path}/sigfile.dat
-mcmc 1000000
+mcmc 100000
 quit
 """)
 
