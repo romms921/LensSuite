@@ -4,7 +4,7 @@ import os
 import re
 import numpy as np 
 
-system_name = 'B2045'
+system_name = '2M1134'
 model_ver = 'sie'
 
 # Import system info
@@ -65,7 +65,7 @@ def rms_extract(model_ver, model_path, obs_point, n_img, h0=False, time_delay=Fa
     for line in opt_result:
         if line.startswith('lens'):
             parts = re.split(r'\s+', line.strip())
-            lens_params_dict[parts[1]] = [float(x) for x in parts[3:]]
+            lens_params_dict[parts[1]] = [float(x) for x in parts[2:]]
     source_params = [[float(x) for x in re.split(r'\s+', line.strip())[1:]] for line in opt_result if line.startswith('point')]
     chi2_line = next((line for line in opt_result if 'chi^2' in line), None)
     if chi2_line is None: raise ValueError("No 'chi^2' line found.")
@@ -259,7 +259,7 @@ glafic.set_secondary('hvary          0', verb = 0)
 glafic.set_secondary('ran_seed -122000', verb = 0)
 
 glafic.startup_setnum(1, 0, 1)
-glafic.set_lens(1, 'sie', z_lens, 331, lens_center_x, lens_center_y, 0.89, 0, 0.0, 0.0)
+glafic.set_lens(1, 'sie', z_lens, 187, lens_center_x, lens_center_y, 0.17, 0, 0.0, 0.0)
 glafic.set_point(1, z_source, lens_center_x, lens_center_y)
 
 glafic.setopt_lens(1, 1, 1, 1, 1, 1, 1, 0, 0)
