@@ -10,12 +10,12 @@ xmin	  -1.0
 ymin	  -1.0
 xmax	  3.678
 ymax	  3.531
-pix_ext   0.001
-pix_poi   0.001
+pix_ext   0.01
+pix_poi   0.01
 maxlev	  1
 
 ## some examples of secondary parameters
-chi2_splane    1
+chi2_splane    0
 chi2_restart   -1
 chi2_usemag    0
 hvary          0
@@ -23,8 +23,8 @@ flag_mcmcall   0
 
 ## define lenses and sources
 startup 1 0 1
-lens sie  0.66 331.9952 1.116136 1.650918 0.8953476 43.34886 0.0 0.0
-point 2.77 1.241999 1.375776
+lens sie  0.66 259.3444 1.116177 1.650946 0.8953898 43.35009 0.0 0.0
+point 2.77 1.242017 1.375763
 end_startup
 
 ## for optimizations
@@ -38,5 +38,5 @@ end_setopt
 start_command
 readobs_point /Users/ainsleylewis/Documents/Astronomy/LensSuite/2M1134/pos_point.dat
 mcmc_sigma /Users/ainsleylewis/Documents/Astronomy/LensSuite/2M1134/mcmc/sigfile.dat
-mcmc 100000
+mcmc 10000
 quit

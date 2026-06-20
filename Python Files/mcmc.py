@@ -261,11 +261,11 @@ sigfile_path = f'./{system_name}/mcmc/sigfile.dat'
 with open(sigfile_path, 'w') as f:
     f.write(f"""# sigma file for MCMC
 5
-10
-0.1
-0.1
-0.1
-10
+2
+0.05
+0.05
+0.05
+2
 """)
 
 
@@ -284,16 +284,16 @@ xmin	  {x_min}
 ymin	  {y_min}
 xmax	  {x_max}
 ymax	  {y_max}
-pix_ext   0.001
-pix_poi   0.001
+pix_ext   0.01
+pix_poi   0.01
 maxlev	  1
 
 ## some examples of secondary parameters
-chi2_splane    1
+chi2_splane    0
 chi2_restart   -1
 chi2_usemag    0
 hvary          0
-flag_mcmcall   1
+flag_mcmcall   0
 
 ## define lenses and sources
 startup 1 0 1
@@ -312,7 +312,7 @@ end_setopt
 start_command
 readobs_point {current_path}/{system_name}/pos_point.dat
 mcmc_sigma {full_path}/sigfile.dat
-mcmc 100000
+mcmc 10000
 quit
 """)
 
