@@ -259,14 +259,12 @@ pos_rms, image_rms, mag_rms, flux_rms, percentage_errors, avg_percentage_error, 
 # Create a sigfile.dat file for MCMC
 sigfile_path = f'./{system_name}/mcmc/sigfile.dat'
 with open(sigfile_path, 'w') as f:
-    f.write(f"""# sigma file for MCMC
-5
-2
-0.05
-0.05
-0.05
-2
-""")
+    f.write(f"""5
+1
+0.003
+0.003
+0.00005
+0.05""")
 
 
 # Create the point.input file 
@@ -284,16 +282,16 @@ xmin	  {x_min}
 ymin	  {y_min}
 xmax	  {x_max}
 ymax	  {y_max}
-pix_ext   0.01
-pix_poi   0.01
+pix_ext   0.005
+pix_poi   0.005
 maxlev	  1
 
 ## some examples of secondary parameters
-chi2_splane    0
+chi2_splane    0 
 chi2_restart   -1
 chi2_usemag    0
 hvary          0
-flag_mcmcall   0
+flag_mcmcall   1
 
 ## define lenses and sources
 startup 1 0 1
@@ -312,7 +310,7 @@ end_setopt
 start_command
 readobs_point {current_path}/{system_name}/pos_point.dat
 mcmc_sigma {full_path}/sigfile.dat
-mcmc 10000
+mcmc 5000
 quit
 """)
 
