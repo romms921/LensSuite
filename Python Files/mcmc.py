@@ -260,10 +260,10 @@ pos_rms, image_rms, mag_rms, flux_rms, percentage_errors, avg_percentage_error, 
 sigfile_path = f'./{system_name}/mcmc/sigfile.dat'
 with open(sigfile_path, 'w') as f:
     f.write(f"""5
-1
-0.003
-0.003
-0.00005
+2
+0.005
+0.005
+0.0001
 0.05""")
 
 
@@ -310,7 +310,7 @@ end_setopt
 start_command
 readobs_point {current_path}/{system_name}/pos_point.dat
 mcmc_sigma {full_path}/sigfile.dat
-mcmc 5000
+mcmc 10000
 quit
 """)
 
