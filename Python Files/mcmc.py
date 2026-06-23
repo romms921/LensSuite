@@ -291,7 +291,7 @@ chi2_splane    0
 chi2_restart   -1
 chi2_usemag    0
 hvary          0
-flag_mcmcall   1
+flag_mcmcall   0
 
 ## define lenses and sources
 startup 1 0 1
