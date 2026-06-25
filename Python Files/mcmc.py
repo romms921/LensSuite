@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 
 # MCMC For Lensed Systems 
 
-system_name = 'B2045'
+system_name = 'GRAL1131'
 model_ver = 'sie'
 current_path = os.getcwd()
 full_path = os.path.join(current_path, system_name, 'mcmc')
@@ -261,13 +261,12 @@ print(lens_params_dict)
 # Create a sigfile.dat file for MCMC
 sigfile_path = f'./{system_name}/mcmc/sigfile.dat'
 with open(sigfile_path, 'w') as f:
-    f.write(f"""6
-0.6    
-200
-0.00005
+    f.write(f"""5    
+0.05
+0.01
 0.0005
-0.0005
-0.00005""")
+0.005
+0.005""")
 
 
 # Create the point.input file 
@@ -305,7 +304,7 @@ end_startup
 ## for optimizations
 ## can be ignored unless you do opts
 start_setopt
-1 1 1 1 1 1 0 0
+0 1 1 1 1 1 0 0
 0 1 1
 end_setopt
 
