@@ -30,7 +30,7 @@ end_startup
 ## for optimizations
 ## can be ignored unless you do opts
 start_setopt
-1 1 1 1 1 1 0 0
+1 1 0 0 0 0 0 0
 0 1 1
 end_setopt
 
