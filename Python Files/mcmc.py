@@ -80,7 +80,7 @@ def rms_extract(model_ver, model_path, obs_point, n_img, h0=False, time_delay=Fa
     for line in opt_result:
         if line.startswith('lens'):
             parts = re.split(r'\s+', line.strip())
-            lens_params_dict[parts[1]] = [float(x) for x in parts[3:]]
+            lens_params_dict[parts[1]] = [float(x) for x in parts[2:]]
     source_params = [[float(x) for x in re.split(r'\s+', line.strip())[1:]] for line in opt_result if line.startswith('point')]
     chi2_line = next((line for line in opt_result if 'chi^2' in line), None)
     if chi2_line is None: raise ValueError("No 'chi^2' line found.")
@@ -256,16 +256,18 @@ lens_center_y = round(lens_center_y, 3)
 # Extract results
 pos_rms, image_rms, mag_rms, flux_rms, percentage_errors, avg_percentage_error, chi2_value, source_params, lens_params_dict, hubble_val, td_vals, td_rms, percentage_errors_td, avg_percentage_error_td, out_point = rms_extract('sie', f'./{system_name}/', obs_point, n_img=n_img, h0=False, time_delay=False)
 
+print(lens_params_dict)
+
 # Create a sigfile.dat file for MCMC
 sigfile_path = f'./{system_name}/mcmc/sigfile.dat'
 with open(sigfile_path, 'w') as f:
     f.write(f"""6
-0.05    
-5
-0.005
-0.005
-0.0001
-0.05""")
+0.6    
+200
+0.00005
+0.0005
+0.0005
+0.00005""")
 
 
 # Create the point.input file 
@@ -296,7 +298,7 @@ flag_mcmcall   0
 
 ## define lenses and sources
 startup 1 0 1
-lens sie  {z_lens} {lens_params_dict['sie'][0]} {lens_params_dict['sie'][1]} {lens_params_dict['sie'][2]} {lens_params_dict['sie'][3]} {lens_params_dict['sie'][4]} 0.0 0.0
+lens sie  {lens_params_dict['sie'][0]} {lens_params_dict['sie'][1]} {lens_params_dict['sie'][2]} {lens_params_dict['sie'][3]} {lens_params_dict['sie'][4]} {lens_params_dict['sie'][5]} 0.0 0.0
 point {z_source} {source_params[0][1]} {source_params[0][2]}
 end_startup
 
