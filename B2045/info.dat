@@ -1,5 +1,5 @@
-z_source = 1.56
-z_lens = 
+z_source = 2.35
+z_lens = 0.87
 Source = J2145
 Pos + Flux Source = Keely et al (2025)
 Config = Quad
