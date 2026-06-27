@@ -4,7 +4,7 @@ import os
 import re
 import numpy as np 
 
-system_name = 'HS0810'
+system_name = 'J0248'
 model_ver = 'sie'
 
 # Import system info
@@ -259,7 +259,7 @@ glafic.set_secondary('hvary          0', verb = 0)
 glafic.set_secondary('ran_seed -122000', verb = 0)
 
 glafic.startup_setnum(1, 0, 1)
-glafic.set_lens(1, 'sie', z_lens, 230, lens_center_x, lens_center_y, 0.1, 0, 0.0, 0.0)
+glafic.set_lens(1, 'sie', z_lens, 100, lens_center_x, lens_center_y, 0.6, 0, 0.0, 0.0)
 glafic.set_point(1, z_source, lens_center_x, lens_center_y)
 
 glafic.setopt_lens(1, 1, 1, 1, 1, 1, 1, 0, 0)
