@@ -23,14 +23,14 @@ flag_mcmcall   0
 
 ## define lenses and sources
 startup 1 0 1
-lens sie  1.1308 440.8198 0.7156479 1.14736 0.5963526 32.08993 0.0 0.0
-point 1.56 0.7647386 0.8469504
+lens sie  0.87 281.4125 0.7156516 1.147228 0.5962655 32.09168 0.0 0.0
+point 2.35 0.7647081 0.8469167
 end_startup
 
 ## for optimizations
 ## can be ignored unless you do opts
 start_setopt
-1 1 0 0 0 0 0 0
+0 1 1 1 1 1 0 0
 0 1 1
 end_setopt
 
