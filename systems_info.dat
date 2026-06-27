@@ -42,10 +42,18 @@ Configuration - Fold
 Flux Ratios manually calculated from - https://iopscience.iop.org/article/10.3847/1538-3881/ab5108/pdf
 Filter - 4.78 mu m
 Notes - Image A and B blended together (elongated Voidt profile), possibility of microlensing
+Galaxy Center - 0.460 0.150 from https://arxiv.org/pdf/1908.06344
 
 
 J0245
 Redshifts - https://arxiv.org/pdf/1912.09133
 Full Name - DESJ0245-0556
 Number of Images - 2
+Galaxy Center - 0.9148±0.005 -1.196±0.005 from https://arxiv.org/pdf/1912.09133
 
+
+J0246
+Redshifts - https://arxiv.org/pdf/1912.09133
+Full Name - DESJ0246-1845
+Number of Images - 2
+Galaxy Center - 0.011±0.005 -0.709±0.005 from https://arxiv.org/pdf/1912.09133
