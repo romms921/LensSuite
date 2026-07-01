@@ -4,7 +4,7 @@ import os
 import re
 import numpy as np 
 
-system_name = 'J1537'
+system_name = 'J2017'
 model_ver = 'sie'
 
 # Import system info
