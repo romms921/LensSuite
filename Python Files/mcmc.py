@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 
 # MCMC For Lensed Systems 
 
-system_name = 'J1251'
+system_name = 'J1537'
 model_ver = 'sie'
 current_path = os.getcwd()
 full_path = os.path.join(current_path, system_name, 'mcmc')
